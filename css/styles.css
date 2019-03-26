@@ -28,6 +28,7 @@ footer {
 }
 
 header,
+.video,
 .about,
 .dignity,
 .screenshots,
@@ -88,6 +89,10 @@ header ul {
     margin-right: 10px;
 }
 
+.video video {
+    width: 100%;
+}
+
 .about h2,
 .about p {
     float: left;
@@ -103,8 +108,22 @@ header ul {
 }
 
 .dignity,
-.reviews {
+.reviews,
+.video {
     background-color: var(--light-gray-background);
+}
+
+.dignity {
+    position: relative;
+    overflow: hidden;
+}
+
+.backvideo {
+    position: absolute;
+    object-position: center center;
+    margin: -50px;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .dignity h2,
@@ -117,13 +136,18 @@ header ul {
     margin-bottom: 29px;
 }
 
+.dignity h2,
+.dignity_block {
+    text-shadow: #ebebeb 1px 1px 1px;
+}
+
 .dignity_block {
     padding-left: 40px;
     background: url(../images/cross.png) no-repeat;
     background-position: left 5px;
 }
 
-.dignity_block:nth-child(-n+5) {
+.dignity_block:nth-child(-n + 6) {
     margin-bottom: 39px;
 }
 
@@ -278,6 +302,10 @@ footer h5 {
     line-height: 40px;
     padding-left: 10px;
     margin-bottom: 21px;
+}
+
+.contacts-left input:required {
+    background-color: #dbdbdb;
 }
 
 .contacts-left textarea {
